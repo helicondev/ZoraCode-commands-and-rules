@@ -10,33 +10,14 @@ Use the following systematic approach to analyze and resolve the error:
 
 {{input}}
 
-Apply the Error Resolution Guidelines defined in the project rules:
+REQUIRED PROCESS:
+1. First review ALL files involved in this error
+2. Identify the exact root cause of the problem
+3. Propose ONLY the minimal fix needed (do not refactor)
+4. Verify your solution actually resolves the specific error
+5. Briefly explain why this solution works
 
-1. Initial Diagnosis
-   - Read the complete stack trace
-   - Identify the specific file and line number
-   - Determine the error type (syntax, runtime, logical, dependency)
+VALIDATION REQUIRED:
+After implementing the fix, you MUST compile and run linter to confirm the error is actually resolved.
 
-2. Contextual Investigation
-   - Examine related code within a 10-15 line radius
-   - Verify imports and dependencies
-   - Review relevant configuration files (package.json, tsconfig, etc.)
-
-3. Resolution Strategy
-   - For TypeScript errors: Check types and interfaces
-   - For dependency errors: Verify installation and versions
-   - For runtime errors: Add validations and handle edge cases
-   - For syntax errors: Correct immediately
-
-4. Implementation and Validation
-   - Apply the specific fix
-   - Run relevant tests
-   - Verify no regressions are introduced
-   - Document the change if necessary
-
-5. Future Prevention
-   - Suggest improvements to prevent similar errors
-   - Add tests if they don't exist
-   - Propose refactoring if needed
-
-Provide a detailed explanation of the error and the steps to fix it.
+IMPORTANT: Only fix what's necessary to resolve the error, keep the rest of the code intact.
